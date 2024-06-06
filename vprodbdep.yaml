@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: vprofile/vprofiledb:V1
+          image: teksphere/vprofiledb:V1
           args:
             - "--ignore-db-dir=lost+found"
           volumeMounts:
@@ -36,5 +36,5 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeID: vol-03664a5feb3fc2454
+            volumeID: vol-06fd12f5e4c4c99fe
             fsType: ext4
